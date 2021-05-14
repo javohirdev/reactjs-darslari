@@ -1,4 +1,4 @@
-### React JS bo'yicha darslarimizning barcha resurslar va kodlari
+### React JS bo'yicha darslarimizning barcha resurslari va kodlari
 
 # React JS bo'yicha barcha darslarimiz pleylisti 👇
 
