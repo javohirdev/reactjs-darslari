@@ -1,0 +1,23 @@
+[
+    {
+       "name": "Javohir Hakimov",
+       "age": 17,
+       "isStudent": false,
+       "country": "Uzbekistan",
+       "phone": 998991234567
+    },
+    {
+        "name": "Abbos Sharifxo'jayev",
+        "age": 16,
+        "isStudent": true,
+        "country": "Uzbekistan",
+        "phone": 998335007890
+    },
+    {
+        "name": "Job Royson",
+        "age": 25,
+        "isStudent": false,
+        "country": "USA",
+        "phone": 123456789
+    }
+]

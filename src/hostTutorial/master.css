@@ -1,0 +1,13 @@
+body{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+.bigText{
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+}
+.description{
+    color: yellow;
+}

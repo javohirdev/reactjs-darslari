@@ -1,0 +1,22 @@
+.box{
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    margin: 25% auto;
+    h1{
+        color: white;
+        text-align: center;
+    }
+    p{
+        color: white;
+        text-align: center;
+        &:nth-child(3){
+            color: red;
+            font-size: 30px;
+        }
+    }
+    &:hover{
+        background-color: orange;
+        cursor: pointer;
+    }
+}
