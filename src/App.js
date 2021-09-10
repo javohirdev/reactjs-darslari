@@ -1,20 +1,35 @@
-import React from 'react';
-import Oddiy2 from './hookTutorial/Oddiy2';
-// import Tutorial1 from './scrollEffect/Tutorial1';
-// import Hosting from './hostTutorial/Hosting';
-// import Map1 from './yandexMapTut/Map1';
-import Tutorial2 from './scrollEffect/Tutorial2';
+import React, { useState, useEffect } from 'react';
+import Joke from './skeletonTut/Joke';
+import './skeletonTut/stil.css';
 
-function App() {
+const App = () => {
+
+  const [joke, setJoke] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const getNewJoke = () => {
+    setLoading(true);
+    fetch('https://api.chucknorris.io/jokes/random')
+      .then(response => response.json())
+      .then(data => {
+        const { icon_url, value } = data;
+        setJoke({ icon_url, value });
+        setLoading(false)
+        console.log(data);
+      })
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      getNewJoke();
+    }, 5000)
+    return () => clearTimeout(timer);
+  }, [])
+
   return (
-    <>
-      {/* <Hosting /> */}
-      {/* <Map1 /> */}
-      {/* <Oddiy2 /> */}
-      {/* <Tutorial1 /> */}
-      <Tutorial2 />
-    </>
+    <div>
+        <Joke joke={joke} loading={loading} getNewJoke={getNewJoke} />
+    </div>
   );
 }
-
 export default App;
