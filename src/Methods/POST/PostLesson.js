@@ -6,7 +6,7 @@ const PostLesson = () => {
     const [post, setPost] = useState(null);
 
     useEffect(() => {
-        axios.post("https://jsonplaceholder.typicode.com/posts")
+        axios.get("https://jsonplaceholder.typicode.com/posts")
             .then((response) => {
                 setPost(response.data);
             })
